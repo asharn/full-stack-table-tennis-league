@@ -58,4 +58,5 @@ to the champion.
 ## External Resources
 - [Building a RESTful service in Spring Boot](http://spring.io/guides/gs/rest-service/)
 - [Testing in Spring Boot](https://www.baeldung.com/spring-boot-testing)
+- Logging in SprintBoot](https://www.baeldung.com/spring-boot-logging
 
