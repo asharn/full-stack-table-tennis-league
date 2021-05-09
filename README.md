@@ -61,3 +61,8 @@ to the champion.
 - [Logging in SprintBoot](https://www.baeldung.com/spring-boot-logging)
 - [Creating a Multi Module Project](https://spring.io/guides/gs/multi-module/)
 
+## Application execution in IntelliJ
+Setting:-
+     ``` Build, Execution, Deployment -> Compiler -> Shared build process VM options
+     ``` -Djps.track.ap.dependencies=false
+
