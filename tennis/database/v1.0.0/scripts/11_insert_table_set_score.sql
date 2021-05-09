@@ -6,6 +6,4 @@ insert into set_score (match_id, set_number, first_registration_games, second_re
 insert into set_score (match_id, set_number, first_registration_games, second_registration_games) values (1, 2, 3, 4);
 insert into set_score (match_id, set_number, first_registration_games, second_registration_games) values (1, 3, 2, 4);
 insert into set_score (match_id, set_number, first_registration_games, second_registration_games) values (1, 4, 1, 4);
-
-
 -- End of file.

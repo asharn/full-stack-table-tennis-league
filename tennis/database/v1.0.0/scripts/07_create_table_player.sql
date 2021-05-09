@@ -4,10 +4,10 @@
 -- Table: player
 DROP TABLE IF EXISTS `player`;
 CREATE TABLE player (
-   id number  NOT NULL,
-   first_name varchar2(50)  NOT NULL,
-   last_name varchar2(50)  NOT NULL,
-   email varchar2(255)  NOT NULL,
+   id integer  NOT NULL,
+   first_name varchar(50)  NOT NULL,
+   last_name varchar(50)  NOT NULL,
+   email varchar(255)  NOT NULL,
    gender char(1)  NOT NULL,
    date_of_birth date  NOT NULL,
    country_code char(3)  NOT NULL,

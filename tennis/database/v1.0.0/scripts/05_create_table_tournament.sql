@@ -4,14 +4,14 @@
 -- Table: tournament
 DROP TABLE IF EXISTS `tournament`;
 CREATE TABLE tournament (
-   id number  NOT NULL,
-   tournament_name varchar2(100)  NOT NULL,
-   location varchar2(50)  NOT NULL,
+   id integer  NOT NULL,
+   tournament_name varchar(100)  NOT NULL,
+   location varchar(50)  NOT NULL,
    start_date date  NOT NULL,
    end_date date  NOT NULL,
-   number_of_rounds number  NOT NULL,
-   tournament_type_id number  NOT NULL,
-   surface_type_id number  NOT NULL,
+   number_of_rounds integer  NOT NULL,
+   tournament_type_id integer  NOT NULL,
+   surface_type_id integer  NOT NULL,
    CONSTRAINT tournament_pk PRIMARY KEY (id)
 ) ;
 -- End of file.

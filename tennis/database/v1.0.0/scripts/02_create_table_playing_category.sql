@@ -4,8 +4,8 @@
 -- Table: playing_category
 DROP TABLE IF EXISTS `playing_category`;
 CREATE TABLE playing_category (
-   id number  NOT NULL,
-   category_name varchar2(50)  NOT NULL,
+   id integer  NOT NULL,
+   category_name varchar(50)  NOT NULL,
    CONSTRAINT playing_category_pk PRIMARY KEY (id)
 ) ;
 -- End of file.

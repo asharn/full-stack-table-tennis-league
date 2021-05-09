@@ -4,7 +4,7 @@
 -- Table: registration
 DROP TABLE IF EXISTS `registration`;
 CREATE TABLE registration (
-   id number  NOT NULL,
+   id integer  NOT NULL,
    registration_date date  NOT NULL,
    CONSTRAINT registration_pk PRIMARY KEY (id)
 ) ;

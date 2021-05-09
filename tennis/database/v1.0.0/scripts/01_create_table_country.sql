@@ -5,7 +5,7 @@
 DROP TABLE IF EXISTS `country`;
 CREATE TABLE country (
    code char(3)  NOT NULL,
-   country_name varchar2(50)  NOT NULL,
+   country_name varchar(50)  NOT NULL,
    CONSTRAINT country_pk PRIMARY KEY (code)
 ) ;
 -- End of file.

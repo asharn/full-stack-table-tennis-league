@@ -4,8 +4,8 @@
 -- Table: tournament_type
 DROP TABLE IF EXISTS `tournament_type`;
 CREATE TABLE tournament_type (
-   id number  NOT NULL,
-   tournament_type varchar2(30)  NOT NULL,
+   id integer  NOT NULL,
+   tournament_type varchar(30)  NOT NULL,
    CONSTRAINT tournament_type_pk PRIMARY KEY (id)
 ) ;
 -- End of file.

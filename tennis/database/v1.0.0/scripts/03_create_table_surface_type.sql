@@ -4,8 +4,8 @@
 -- Table: surface_type
 DROP TABLE IF EXISTS `surface_type`;
 CREATE TABLE surface_type (
-   id number  NOT NULL,
-   surface_type varchar2(50)  NOT NULL,
+   id integer  NOT NULL,
+   surface_type varchar(50)  NOT NULL,
    CONSTRAINT surface_type_pk PRIMARY KEY (id)
 ) ;
 -- End of file.

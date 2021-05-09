@@ -4,9 +4,9 @@
 -- Table: match_result
 DROP TABLE IF EXISTS `match_result`;
 CREATE TABLE match_result (
-   match_id number  NOT NULL,
-   winner_registration_id number  NOT NULL,
-   number_of_sets_played number  NOT NULL,
+   match_id integer  NOT NULL,
+   winner_registration_id integer  NOT NULL,
+   number_of_sets_played integer  NOT NULL,
    is_opponent_retired char(1)  NULL,
    CONSTRAINT match_result_pk PRIMARY KEY (match_id)
 ) ;
