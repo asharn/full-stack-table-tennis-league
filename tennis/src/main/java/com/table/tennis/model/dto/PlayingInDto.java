@@ -2,11 +2,12 @@ package com.table.tennis.model.dto;
 
 
 
-import com.table.tennis.model.entity.Registration;
-import com.table.tennis.model.entity.TournamentPlayingCategory;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.Data;
 
 @Data
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class PlayingInDto {
 
     private Integer id;

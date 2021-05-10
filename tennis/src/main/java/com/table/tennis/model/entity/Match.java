@@ -21,7 +21,11 @@ public class Match  implements Serializable {
     @ManyToOne
     @JoinColumn(name = "tournament_playing_category_id")
     private TournamentPlayingCategory tournamentPlayingCategory;
-    private Integer firstRegistrationId;
-    private Integer secondRegistrationId;
+    @ManyToOne
+    @JoinColumn(name = "first_registration_id")
+    private Registration firstRegistrationId;
+    @ManyToOne
+    @JoinColumn(name = "second_registration_id")
+    private Registration secondRegistrationId;
     private Integer round;
 }
