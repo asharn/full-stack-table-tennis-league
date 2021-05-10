@@ -5,6 +5,6 @@ import lombok.Data;
 
 @Data
 public class PlayingCategoryDto {
-    private Long id;
+    private Integer id;
     private String categoryName;
 }

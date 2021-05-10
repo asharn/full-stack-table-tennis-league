@@ -4,8 +4,8 @@ import lombok.Data;
 
 @Data
 public class SetScoreDto {
-    private MatchDto matchId;
-    private Long setNumber;
-    private Long firstRegistrationGame;
-    private Long secondRegistrationGame;
+    private MatchDto match;
+    private Integer setNumber;
+    private Integer firstRegistrationGames;
+    private Integer secondRegistrationGames;
 }

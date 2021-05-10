@@ -4,10 +4,10 @@ import lombok.Data;
 
 @Data
 public class GameScoreDto {
-    private Long matchId;
-    private Long setNumber;
-    private Long gameNumber;
-    private Long firstRegistrationPoint;
-    private Long secondRegistrationPoint;
+    private MatchDto match;
+    private Integer setNumber;
+    private Integer gameNumber;
+    private Integer firstRegistrationPoint;
+    private Integer secondRegistrationPoint;
 
 }

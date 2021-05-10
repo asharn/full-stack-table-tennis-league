@@ -4,9 +4,9 @@ import lombok.Data;
 
 @Data
 public class MatchDto {
-    private Long id;
-    private Long tournamentPlayingCategoryId;
-    private Long firstRegistrationId;
-    private Long secondRegistrationId;
+    private Integer id;
+    private TournamentPlayingCategoryDto tournamentPlayingCategory;
+    private Integer firstRegistrationId;
+    private Integer secondRegistrationId;
     private Integer round;
 }

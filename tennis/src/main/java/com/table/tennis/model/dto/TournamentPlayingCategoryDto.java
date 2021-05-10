@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class TournamentPlayingCategoryDto {
-    private Long id;
-    private TournamentDto tournamentId;
-    private PlayingCategoryDto playingCategoryId;
+    private Integer id;
+    private TournamentDto tournament;
+    private PlayingCategoryDto playingCategory;
 }

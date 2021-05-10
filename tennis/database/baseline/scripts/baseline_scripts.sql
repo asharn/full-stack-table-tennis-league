@@ -3,7 +3,7 @@
 -- Baseline tables
 DROP TABLE IF EXISTS `country`;
 CREATE TABLE country (
-   code char(3)  NOT NULL,
+   code varchar(3)  NOT NULL,
    country_name varchar(50)  NOT NULL,
    CONSTRAINT country_pk PRIMARY KEY (code)
 ) ;
@@ -84,7 +84,7 @@ CREATE TABLE player (
    email varchar(255)  NOT NULL,
    gender char(1)  NOT NULL,
    date_of_birth date  NOT NULL,
-   country_code char(3)  NOT NULL,
+   country_code varchar(3)  NOT NULL,
    CONSTRAINT player_pk PRIMARY KEY (id)
 ) ;
 insert into player (id, first_name, last_name, email, gender, date_of_birth, country_code) values (1, 'Ashish', 'Karn', 'er.ashishkarn@gmail.com','M','1993-03-15 10:22:12', 'IND');
@@ -182,7 +182,7 @@ CREATE TABLE match_result (
    match_id integer  NOT NULL,
    winner_registration_id integer  NOT NULL,
    number_of_sets_played integer  NOT NULL,
-   is_opponent_retired char(1)  NULL,
+   is_opponent_retired tinyint(1)  NULL,
    CONSTRAINT match_result_pk PRIMARY KEY (match_id)
 ) ;
 insert into match_result (match_id, winner_registration_id, number_of_sets_played, is_opponent_retired) values (1, 1, 6, 0);

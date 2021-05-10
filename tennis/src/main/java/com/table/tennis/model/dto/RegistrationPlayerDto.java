@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 public class RegistrationPlayerDto {
-    private RegistrationDto registrationId;
-    private PlayerDto playerId;
+    private RegistrationDto registration;
+    private PlayerDto player;
 
 }

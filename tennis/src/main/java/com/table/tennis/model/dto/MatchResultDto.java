@@ -4,9 +4,9 @@ import lombok.Data;
 
 @Data
 public class MatchResultDto {
-    private Long matchId;
-    private Long winnerRegistrationId;
-    private Long numberRegistrationId;
+    private MatchDto match;
+    private Integer winnerRegistrationId;
+    private Integer numberOfSetsPlayed;
     private Boolean isOpponentRetired;
 
 }

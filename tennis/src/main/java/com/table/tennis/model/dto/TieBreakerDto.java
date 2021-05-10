@@ -5,8 +5,8 @@ import lombok.Data;
 
 @Data
 public class TieBreakerDto {
-    private MatchDto matchId;
-    private Long setNumber;
-    private Long firstRegistrationTieBreaker;
-    private Long secRegistrationTieBreaker;
+    private MatchDto match;
+    private Integer setNumber;
+    private Integer firstRegistrationTieBreaker;
+    private Integer secRegistrationTieBreaker;
 }

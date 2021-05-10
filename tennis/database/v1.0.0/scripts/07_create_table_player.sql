@@ -10,7 +10,7 @@ CREATE TABLE player (
    email varchar(255)  NOT NULL,
    gender char(1)  NOT NULL,
    date_of_birth date  NOT NULL,
-   country_code char(3)  NOT NULL,
+   country_code varchar(3)  NOT NULL,
    CONSTRAINT player_pk PRIMARY KEY (id)
 ) ;
 -- End of file.

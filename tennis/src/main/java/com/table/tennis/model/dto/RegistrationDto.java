@@ -6,6 +6,6 @@ import lombok.Data;
 
 @Data
 public class RegistrationDto {
-    private Long id;
+    private Integer id;
     private Date registrationDate;
 }
