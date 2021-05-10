@@ -1,6 +1,6 @@
 package com.table.tennis.mapper;
 
-public abstract class EntityDtoMapper<ENT, DTO>{
-    public abstract DTO toDTO(ENT ent);
-    public abstract ENT toEntity(DTO dto);
+public interface EntityDtoMapper<ENT, DTO>{
+    DTO toDTO(ENT ent);
+    ENT toEntity(DTO dto);
 }

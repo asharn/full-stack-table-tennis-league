@@ -6,5 +6,5 @@ import org.mapstruct.Mapper;
 
 
 @Mapper
-public abstract class CountryMapper extends EntityDtoMapper<Country, CountryDto>{
+public abstract class CountryMapper implements EntityDtoMapper<Country, CountryDto> {
 }

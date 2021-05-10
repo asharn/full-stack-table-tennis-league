@@ -2,8 +2,8 @@
 -- Last modification date: 2021-05-08 18:55:03.182
 -- tables
 -- Table: match
-DROP TABLE IF EXISTS `match`;
-CREATE TABLE `match` (
+DROP TABLE IF EXISTS `matches`;
+CREATE TABLE `matches` (
    id integer  NOT NULL,
    tournament_playing_category_id integer  NOT NULL,
    first_registration_id integer  NOT NULL,

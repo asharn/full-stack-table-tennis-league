@@ -3,7 +3,7 @@
 -- Baseline tables
 DROP TABLE IF EXISTS `tie_breaker`;
 DROP TABLE IF EXISTS `match_result`;
-DROP TABLE IF EXISTS `match`;
+DROP TABLE IF EXISTS `matches`;
 DROP TABLE IF EXISTS `game_score`;
 DROP TABLE IF EXISTS `set_score`;
 DROP TABLE IF EXISTS `playing_in`;

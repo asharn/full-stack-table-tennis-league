@@ -129,9 +129,9 @@ CREATE TABLE playing_in (
    CONSTRAINT playing_in_pk PRIMARY KEY (id)
 ) ;
 insert into playing_in (id, registration_id, seed, tournament_playing_category_id) values (1, 1, 2, 1);
-insert into playing_in (id, registration_id, seed, tournament_playing_category_id) values (2, 1, 2, 1);
+insert into playing_in (id, registration_id, seed, tournament_playing_category_id) values (2, 2, 2, 1);
 insert into playing_in (id, registration_id, seed, tournament_playing_category_id) values (3, 1, 2, 1);
-insert into playing_in (id, registration_id, seed, tournament_playing_category_id) values (4, 1, 2, 1);
+insert into playing_in (id, registration_id, seed, tournament_playing_category_id) values (4, 4, 2, 1);
 insert into playing_in (id, registration_id, seed, tournament_playing_category_id) values (5, 1, 2, 1);
 
 DROP TABLE IF EXISTS `set_score`;
@@ -161,8 +161,8 @@ insert into game_score (match_id, set_number, game_number, first_registration_po
 insert into game_score (match_id, set_number, game_number, first_registration_point, second_registration_point) values (2, 1, 3, 40, 20);
 insert into game_score (match_id, set_number, game_number, first_registration_point, second_registration_point) values (2, 1, 4, 10, 10);
 
-DROP TABLE IF EXISTS `match`;
-CREATE TABLE `match` (
+DROP TABLE IF EXISTS `matches`;
+CREATE TABLE `matches` (
    id integer  NOT NULL,
    tournament_playing_category_id integer  NOT NULL,
    first_registration_id integer  NOT NULL,
@@ -170,12 +170,12 @@ CREATE TABLE `match` (
    round integer  NOT NULL,
    CONSTRAINT match_pk PRIMARY KEY (id)
 ) ;
-insert into `match` (id, tournament_playing_category_id, first_registration_id, second_registration_id, round) values (1, 1, 1, 2, 1);
-insert into `match` (id, tournament_playing_category_id, first_registration_id, second_registration_id, round) values (2, 1, 1, 2, 2);
-insert into `match` (id, tournament_playing_category_id, first_registration_id, second_registration_id, round) values (3, 1, 3, 4, 1);
-insert into `match` (id, tournament_playing_category_id, first_registration_id, second_registration_id, round) values (4, 1, 3, 4, 2);
-insert into `match` (id, tournament_playing_category_id, first_registration_id, second_registration_id, round) values (5, 1, 2, 4, 1);
-insert into `match` (id, tournament_playing_category_id, first_registration_id, second_registration_id, round) values (6, 1, 2, 4, 2);
+insert into `matches` (id, tournament_playing_category_id, first_registration_id, second_registration_id, round) values (1, 1, 1, 2, 1);
+insert into `matches` (id, tournament_playing_category_id, first_registration_id, second_registration_id, round) values (2, 1, 1, 2, 2);
+insert into `matches` (id, tournament_playing_category_id, first_registration_id, second_registration_id, round) values (3, 1, 3, 4, 1);
+insert into `matches` (id, tournament_playing_category_id, first_registration_id, second_registration_id, round) values (4, 1, 3, 4, 2);
+insert into `matches` (id, tournament_playing_category_id, first_registration_id, second_registration_id, round) values (5, 1, 2, 4, 1);
+insert into `matches` (id, tournament_playing_category_id, first_registration_id, second_registration_id, round) values (6, 1, 2, 4, 2);
 
 DROP TABLE IF EXISTS `match_result`;
 CREATE TABLE match_result (
