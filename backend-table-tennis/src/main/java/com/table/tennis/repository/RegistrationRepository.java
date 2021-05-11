@@ -1,10 +1,11 @@
 package com.table.tennis.repository;
 
 import com.table.tennis.model.entity.Match;
+import com.table.tennis.model.entity.MatchResult;
+import com.table.tennis.model.entity.Registration;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
 /**
  * Copyright 2021 @asharn
  * @author Ashish Karn
@@ -14,7 +15,5 @@ import java.util.List;
  * @version v1.0.0
  */
 @Repository
-public interface MatchRepository extends CrudRepository<Match,Integer> {
-    List<Match> findAll();
-    List<Match> findAllByRound(Integer round);
+public interface RegistrationRepository extends CrudRepository<Registration, Integer> {
 }

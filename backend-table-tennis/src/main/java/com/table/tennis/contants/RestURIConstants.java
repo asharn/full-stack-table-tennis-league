@@ -13,5 +13,7 @@ public class RestURIConstants {
     public static final String PARTICIPANTS = API_VERSION + "/participants";
     public static final String MATCHES = API_VERSION + "/matches";
     public static final String ROUND = "/{round}";
+    public static final String TOURNAMENT = API_VERSION + "/tournament";
+
 
 }

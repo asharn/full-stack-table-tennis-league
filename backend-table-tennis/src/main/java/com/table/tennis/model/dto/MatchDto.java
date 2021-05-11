@@ -2,7 +2,11 @@ package com.table.tennis.model.dto;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
+import com.table.tennis.model.entity.MatchResult;
 import lombok.Data;
+
+import java.util.List;
+
 /**
  * Copyright 2021 @asharn
  * @author Ashish Karn

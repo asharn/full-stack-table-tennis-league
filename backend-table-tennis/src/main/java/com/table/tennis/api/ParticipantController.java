@@ -24,7 +24,7 @@ public class ParticipantController {
 
     @GetMapping(RestURIConstants.PARTICIPANTS)
     public ResponseEntity<ApiResponse> getParticipants() {
-        ApiResponse apiResponse =  new ApiResponse();
+        var apiResponse =  new ApiResponse();
         apiResponse.setStatusCode(1000);
         apiResponse.setStatusMessage("Success");
         apiResponse.setData(participantService.getAllParticipants());

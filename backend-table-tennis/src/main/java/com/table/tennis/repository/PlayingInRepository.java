@@ -14,6 +14,6 @@ import java.util.List;
  * @version v1.0.0
  */
 @Repository
-public interface PlayingInRepository extends CrudRepository<PlayingIn,Long> {
+public interface PlayingInRepository extends CrudRepository<PlayingIn,Integer> {
     List<PlayingIn> findAll();
 }

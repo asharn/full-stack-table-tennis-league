@@ -3,10 +3,15 @@ package com.table.tennis.model.entity;
 import lombok.Data;
 
 import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.MapsId;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import java.io.Serializable;
 /**
  * Copyright 2021 @asharn
@@ -19,12 +24,21 @@ import java.io.Serializable;
 @Data
 @Entity
 public class MatchResult  implements Serializable {
-    @ManyToOne
+
+    @EmbeddedId
+    private MatchIdPK matchId;
+
+    @OneToOne
     @JoinColumn(name = "match_id")
-    @Id
+    @MapsId( "matchId" )
     private Match match;
-    private Integer winnerRegistrationId;
+
+    @ManyToOne
+    @JoinColumn(name = "winner_registration_id")
+    private Registration registration;
+
     private Integer numberOfSetsPlayed;
+
     @Column(name = "is_opponent_retired", columnDefinition = "TINYINT(1)", nullable = false)
     private Boolean isOpponentRetired;
 

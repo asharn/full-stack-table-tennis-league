@@ -15,7 +15,7 @@ import lombok.Data;
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class MatchResultDto {
     private MatchDto match;
-    private Integer winnerRegistrationId;
+    private RegistrationDto registrationDto;
     private Integer numberOfSetsPlayed;
     private Boolean isOpponentRetired;
 

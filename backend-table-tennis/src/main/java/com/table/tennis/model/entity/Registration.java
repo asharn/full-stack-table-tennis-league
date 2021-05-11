@@ -2,13 +2,16 @@ package com.table.tennis.model.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import lombok.Data;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 /**
@@ -28,4 +31,5 @@ public class Registration  implements Serializable {
 
     @Temporal(TemporalType.DATE)
     private Date registrationDate;
+
 }
