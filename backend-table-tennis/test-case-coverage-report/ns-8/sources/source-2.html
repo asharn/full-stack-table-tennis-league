@@ -1,0 +1,158 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > ParticipantServiceImpl</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+    @import "../../.css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../.js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.table.tennis.service.impl</a>
+</div>
+
+<h1>Coverage Summary for Class: ParticipantServiceImpl (com.table.tennis.service.impl)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">ParticipantServiceImpl</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    66.7%
+  </span>
+  <span class="absValue">
+    (2/3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    35.7%
+  </span>
+  <span class="absValue">
+    (5/14)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.table.tennis.service.impl;
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;import com.table.tennis.model.entity.PlayingIn;
+<i class="no-highlight">4</i>&nbsp;import com.table.tennis.model.entity.Registration;
+<i class="no-highlight">5</i>&nbsp;import com.table.tennis.model.entity.RegistrationPlayer;
+<i class="no-highlight">6</i>&nbsp;import com.table.tennis.model.response.ParticipantResponse;
+<i class="no-highlight">7</i>&nbsp;import com.table.tennis.repository.PlayingInRepository;
+<i class="no-highlight">8</i>&nbsp;import com.table.tennis.repository.RegistrationPlayerRepository;
+<i class="no-highlight">9</i>&nbsp;import com.table.tennis.service.ParticipantService;
+<i class="no-highlight">10</i>&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+<i class="no-highlight">11</i>&nbsp;import org.springframework.stereotype.Service;
+<i class="no-highlight">12</i>&nbsp;import org.springframework.util.CollectionUtils;
+<i class="no-highlight">13</i>&nbsp;
+<i class="no-highlight">14</i>&nbsp;import java.util.ArrayList;
+<i class="no-highlight">15</i>&nbsp;import java.util.List;
+<i class="no-highlight">16</i>&nbsp;import java.util.stream.Collectors;
+<i class="no-highlight">17</i>&nbsp;/**
+<i class="no-highlight">18</i>&nbsp; * Copyright 2021 @asharn
+<i class="no-highlight">19</i>&nbsp; * @author Ashish Karn
+<i class="no-highlight">20</i>&nbsp; * @updated_at 2021-05-10T22:21:53+0530
+<i class="no-highlight">21</i>&nbsp; * @created_at 2021-05-10T22:21:53+0530
+<i class="no-highlight">22</i>&nbsp; * @since Java-11
+<i class="no-highlight">23</i>&nbsp; * @version v1.0.0
+<i class="no-highlight">24</i>&nbsp; */
+<i class="no-highlight">25</i>&nbsp;@Service
+<b class="fc"><i class="no-highlight">26</i>&nbsp;public class ParticipantServiceImpl implements ParticipantService {</b>
+<i class="no-highlight">27</i>&nbsp;
+<i class="no-highlight">28</i>&nbsp;    @Autowired
+<i class="no-highlight">29</i>&nbsp;    private PlayingInRepository playingInRepository;
+<i class="no-highlight">30</i>&nbsp;
+<i class="no-highlight">31</i>&nbsp;    @Autowired
+<i class="no-highlight">32</i>&nbsp;    private RegistrationPlayerRepository registrationPlayerRepository;
+<i class="no-highlight">33</i>&nbsp;
+<i class="no-highlight">34</i>&nbsp;    @Override
+<i class="no-highlight">35</i>&nbsp;    public List&lt;ParticipantResponse&gt; getAllParticipants() {
+<b class="fc"><i class="no-highlight">36</i>&nbsp;        List&lt;ParticipantResponse&gt; participantResponses = new ArrayList&lt;&gt;();</b>
+<i class="no-highlight">37</i>&nbsp;
+<b class="fc"><i class="no-highlight">38</i>&nbsp;        List&lt;PlayingIn&gt; playingIns = playingInRepository.findAll();</b>
+<b class="fc"><i class="no-highlight">39</i>&nbsp;        if(!CollectionUtils.isEmpty(playingIns)){</b>
+<b class="nc"><i class="no-highlight">40</i>&nbsp;            List&lt;Registration&gt; registrations = playingIns.stream().map(PlayingIn::getRegistration).collect(Collectors.toList());</b>
+<b class="nc"><i class="no-highlight">41</i>&nbsp;            List&lt;RegistrationPlayer&gt; registrationPlayers = registrationPlayerRepository.findAllByRegistrationIn(registrations);</b>
+<b class="nc"><i class="no-highlight">42</i>&nbsp;            participantResponses = registrationPlayers.stream().map(x-&gt;{</b>
+<b class="nc"><i class="no-highlight">43</i>&nbsp;                ParticipantResponse participantResponse = new ParticipantResponse();</b>
+<b class="nc"><i class="no-highlight">44</i>&nbsp;                participantResponse.setFirstName(x.getPlayer().getFirstName());</b>
+<b class="nc"><i class="no-highlight">45</i>&nbsp;                participantResponse.setLastName(x.getPlayer().getLastName());</b>
+<b class="nc"><i class="no-highlight">46</i>&nbsp;                participantResponse.setEmail(x.getPlayer().getEmail());</b>
+<b class="nc"><i class="no-highlight">47</i>&nbsp;                return participantResponse;</b>
+<b class="nc"><i class="no-highlight">48</i>&nbsp;            }).collect(Collectors.toList());</b>
+<i class="no-highlight">49</i>&nbsp;        }
+<i class="no-highlight">50</i>&nbsp;
+<b class="fc"><i class="no-highlight">51</i>&nbsp;        return participantResponses;</b>
+<i class="no-highlight">52</i>&nbsp;    }
+<i class="no-highlight">53</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2021-05-11 10:25</div>
+</div>
+</body>
+</html>

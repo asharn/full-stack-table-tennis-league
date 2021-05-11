@@ -1,0 +1,98 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > MatchRepository</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+    @import "../../.css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../.js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.table.tennis.repository</a>
+</div>
+
+<h1>Coverage Summary for Class: MatchRepository (com.table.tennis.repository)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+</tr>
+  <tr>
+    <td class="name">MatchRepository$MockitoMock$1482617226</td>
+  </tr>
+  <tr>
+    <td class="name">MatchRepository$MockitoMock$1482617226$auxiliary$MbOcZ7bA</td>
+  </tr>
+  <tr>
+    <td class="name">MatchRepository$MockitoMock$1482617226$auxiliary$nLuAWb2c</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.table.tennis.repository;
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;import com.table.tennis.model.entity.Match;
+<i class="no-highlight">4</i>&nbsp;import org.springframework.data.repository.CrudRepository;
+<i class="no-highlight">5</i>&nbsp;import org.springframework.stereotype.Repository;
+<i class="no-highlight">6</i>&nbsp;
+<i class="no-highlight">7</i>&nbsp;import java.util.List;
+<i class="no-highlight">8</i>&nbsp;/**
+<i class="no-highlight">9</i>&nbsp; * Copyright 2021 @asharn
+<i class="no-highlight">10</i>&nbsp; * @author Ashish Karn
+<i class="no-highlight">11</i>&nbsp; * @updated_at 2021-05-10T22:21:53+0530
+<i class="no-highlight">12</i>&nbsp; * @created_at 2021-05-10T22:21:53+0530
+<i class="no-highlight">13</i>&nbsp; * @since Java-11
+<i class="no-highlight">14</i>&nbsp; * @version v1.0.0
+<i class="no-highlight">15</i>&nbsp; */
+<i class="no-highlight">16</i>&nbsp;@Repository
+<i class="no-highlight">17</i>&nbsp;public interface MatchRepository extends CrudRepository&lt;Match,Long&gt; {
+<i class="no-highlight">18</i>&nbsp;    List&lt;Match&gt; findAll();
+<i class="no-highlight">19</i>&nbsp;    List&lt;Match&gt; findAllByRound(Integer round);
+<i class="no-highlight">20</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2021-05-11 10:25</div>
+</div>
+</body>
+</html>
