@@ -320,6 +320,8 @@ Response:
 
 ## TestCase coverage report
 Test case coverage report will be found within directory: [test-case-coverage-report](https://github.com/asharn/full-stack-table-tennis-league/blob/main/backend-table-tennis/test-case-coverage-report/index.html)
+![image](https://user-images.githubusercontent.com/5220302/117761586-38c73900-b245-11eb-9de4-20fbc17c5822.png)
+
 
 
 ## External Resources
