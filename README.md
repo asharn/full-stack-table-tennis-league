@@ -318,6 +318,10 @@ Response:
 }
 ```
 
+## TestCase coverage report
+Test case coverage report will be found within directory: [test-case-coverage-report](https://github.com/asharn/full-stack-table-tennis-league/blob/main/backend-table-tennis/test-case-coverage-report/index.html)
+
+
 ## External Resources
 - [Building a RESTful service in Spring Boot](http://spring.io/guides/gs/rest-service/)
 - [Testing in Spring Boot](https://www.baeldung.com/spring-boot-testing)
