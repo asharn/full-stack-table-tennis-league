@@ -1,18 +1,32 @@
 # Full Stack Table Tennis League
 
-# Problem Statement
+This repository contains full stack application code for backend and frontend code with their respective design, build, and release process.
 
-## Backend & full-stack developers Exercise : TheChampion
+
+## Content 
+
+- Problem Statement(#problem-statement)
+- [List of projects you will develop](#list-of-projects)
+- [What it Does?](#what-it-does)
+- [How it Works?](#how-it-works)
+- [Requirements](#requirements)
+- [Setup](#setup)
+- [Run the application](#run-the-application)
+
+
+## Problem Statement
+
+### Backend & full-stack developers Exercise : TheChampion
 As an initiative a tennis-table league has to be design for team members inside the digital factory, allowing all staff to participate and randomly manages the matches of all participants and compose a league of 3 matches a day and maximum 12 participants, consuming a modern API for basic features. This is planned to be API first approach, of well-tested functions and enabling agility of later modifications.
 
-## Technology constraints
+### Technology constraints
 - At the digital factory, we currently have a microservices architecture with services mostly written in Spring Boot.
 - We would like you to develop a single service using Spring Boot with either Java or Kotlin that exposes several REST
 endpoints (see next page)
 - You can use whatever database and data access method; the application should create the required database structure.
 - You should include a README file that has instructions for us to get the solution running on our machines.
 
-## What are we looking to test?
+### What are we looking to test?
 - The overall software architecture of the application
 - The structure and quality of the code itself
 - The use of well-known patterns for REST and Spring development
@@ -22,23 +36,23 @@ structure and code-quality.
 - Bonus points if you include unit tests in your solution.
 
 
-## What are we not looking to test?
+### What are we not looking to test?
 - We don’t expect you to implement authentication or
 authorization
 
-## **Your APIs should provide the following functionality to downstream consumers of the API (in a RESTful way):**
+### **Your APIs should provide the following functionality to downstream consumers of the API (in a RESTful way):**
 
-### Participants
+#### Participants
 - Submit a participant request
 - Get a list of all participants
 - Group randomly participants into (n) groups
 
-### Matches
+#### Matches
 - Get list of all automatically created the first-round matches
 - Update match winner and results
 - Close round
 
-### The League | BONUS
+#### The League | BONUS
 - Submit a request of new match (players and time)
 - Submit league champion
 
@@ -53,4 +67,32 @@ APIs described using Angular.**(ONLY FULL-STACK DEVELOPER/LEADER)**
 
 **BONUS POINTS:** Create a new model for **‘Congratulation Mail’** to be sent
 to the champion.
+
+
+## List of projects you will develop
+### Backend Application
+### Frontend Application
+
+
+## What it Does?
+
+
+
+## How it Works?
+
+
+## Requirements
+### Hardware
+
+### Software
+
+
+## Setup
+### Install Nodejs and its dependencies
+
+### Install npm
+
+
+## Run the application
+### Step 1 - Start the server
 
