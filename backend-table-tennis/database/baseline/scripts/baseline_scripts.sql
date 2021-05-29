@@ -1,6 +1,9 @@
 -- Created by Ashish Karn
 -- Creation date: 2021-05-08 18:55:03.182
 -- Baseline tables
+
+CREATE DATABASE table_tennis;
+
 DROP TABLE IF EXISTS `country`;
 CREATE TABLE country (
    code varchar(3)  NOT NULL,
